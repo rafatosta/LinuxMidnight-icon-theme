@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=LinuxDark
 Comment=Modern dark icon theme for Linux desktops
-Inherits=hicolor
+Inherits=Adwaita,AdwaitaLegacy,hicolor
 Example=folder
 
 Directories=scalable/apps,scalable/actions,scalable/categories,scalable/devices,scalable/emblems,scalable/mimetypes,scalable/panel,scalable/places,scalable/status,symbolic/actions,symbolic/devices,symbolic/places,symbolic/status
