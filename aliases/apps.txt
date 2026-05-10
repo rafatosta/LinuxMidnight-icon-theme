@@ -1,0 +1,2 @@
+code:com.visualstudio.code,visual-studio-code,vscode
+google-chrome:com.google.Chrome
