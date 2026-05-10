@@ -3,10 +3,10 @@
 set -Eeuo pipefail
 
 # ========================================
-# LinuxDark Icon Theme - Dev Installer
+# LinuxMidnight Icon Theme - Dev Installer
 # ========================================
 
-THEME_NAME="LinuxDark"
+THEME_NAME="LinuxMidnight"
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 TARGET_DIR="$HOME/.local/share/icons/$THEME_NAME"
@@ -16,7 +16,7 @@ SKIPPED=0
 MISSING=0
 
 echo "========================================"
-echo " LinuxDark Icon Theme - Dev Install"
+echo " LinuxMidnight Icon Theme - Dev Install"
 echo "========================================"
 echo
 

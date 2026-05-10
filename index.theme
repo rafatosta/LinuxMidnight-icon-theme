@@ -1,5 +1,5 @@
 [Icon Theme]
-Name=LinuxDark
+Name=LinuxMidnight
 Comment=Modern dark icon theme for Linux desktops
 Inherits=Adwaita,AdwaitaLegacy,hicolor
 Example=folder

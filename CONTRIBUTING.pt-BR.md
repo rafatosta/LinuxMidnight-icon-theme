@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este projeto busca manter uma linguagem visual consistente para o **LinuxDark-icon-theme**, tornando as contribuições simples e previsíveis.
+Este projeto busca manter uma linguagem visual consistente para o **LinuxMidnight-icon-theme**, tornando as contribuições simples e previsíveis.
 
 ## Estrutura do Repositório
 

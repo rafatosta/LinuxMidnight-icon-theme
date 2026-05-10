@@ -1,4 +1,4 @@
-# LinuxDark-icon-theme
+# LinuxMidnight-icon-theme
 
 Modern dark icon theme for Linux desktops.
 
@@ -12,7 +12,7 @@ Modern dark icon theme for Linux desktops.
 Materials and references used in this theme:
 
 - Base template created for the project: `templates/app-template-black.svg`
-- Official visual references from each application/brand, adapted to match the LinuxDark visual style
+- Official visual references from each application/brand, adapted to match the LinuxMidnight visual style
 - Community icon naming conventions from Linux desktop environments (Freedesktop-compatible naming)
 - [MacTahoe-icon-theme](https://github.com/vinceliuice/MacTahoe-icon-theme)
 - [New Google Workspace Icons 2026](https://www.figma.com/community/file/1630481186186054299)

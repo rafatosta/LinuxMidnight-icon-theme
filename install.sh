@@ -2,7 +2,7 @@
 
 set -e
 
-THEME_NAME="LinuxDark"
+THEME_NAME="LinuxMidnight"
 TARGET_DIR="$HOME/.local/share/icons/$THEME_NAME"
 
 echo "Installing $THEME_NAME..."

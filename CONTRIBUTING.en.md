@@ -2,7 +2,7 @@
 
 ## Goal
 
-This project aims to keep a consistent visual language for the **LinuxDark-icon-theme** while making contributions simple and predictable.
+This project aims to keep a consistent visual language for the **LinuxMidnight-icon-theme** while making contributions simple and predictable.
 
 ## Repository Structure
 
