@@ -2,6 +2,19 @@
 
 Modern dark icon theme for Linux desktops.
 
+## Documentation
+
+- Contributing guide (English): `CONTRIBUTING.en.md`
+- Guia de contribuição (Português-BR): `CONTRIBUTING.pt-BR.md`
+
+## Credits
+
+Materials and references used in this theme:
+
+- Base template created for the project: `templates/app-template-black.svg`
+- Official visual references from each application/brand, adapted to match the LinuxDark visual style
+- Community icon naming conventions from Linux desktop environments (Freedesktop-compatible naming)
+
 ## Installation
 
 ```bash
