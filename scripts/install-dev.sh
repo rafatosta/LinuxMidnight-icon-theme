@@ -11,9 +11,6 @@ THEME_NAME="LinuxDark-icon-theme"
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 TARGET_DIR="$HOME/.local/share/icons/$THEME_NAME"
 
-ALIASES_FILE="$ROOT_DIR/aliases/apps.txt"
-APPS_DIR="$ROOT_DIR/scalable/apps"
-
 CREATED=0
 SKIPPED=0
 MISSING=0
@@ -24,17 +21,28 @@ echo "========================================"
 echo
 
 # ========================================
-# CHECK PROJECT STRUCTURE
+# CONTEXTS
 # ========================================
 
-echo "[1/7] Checking project structure..."
+declare -A CONTEXTS=(
+    ["apps"]="scalable/apps"
+    ["places"]="scalable/places"
+    ["mimetypes"]="scalable/mimetypes"
+    ["devices"]="scalable/devices"
+    ["actions"]="scalable/actions"
+    ["status"]="scalable/status"
+)
+
+# ========================================
+# VALIDATE STRUCTURE
+# ========================================
+
+echo "[1/6] Validating project structure..."
 echo
 
 required_dirs=(
-    "$ROOT_DIR/scalable/apps"
-    "$ROOT_DIR/scalable/actions"
-    "$ROOT_DIR/scalable/places"
-    "$ROOT_DIR/scalable/status"
+    "$ROOT_DIR/scalable"
+    "$ROOT_DIR/aliases"
 )
 
 for dir in "${required_dirs[@]}"
@@ -54,17 +62,40 @@ fi
 echo "[OK] Project structure valid"
 
 # ========================================
-# GENERATE SYMLINKS
+# GENERATE ALIASES
 # ========================================
 
 echo
-echo "[2/7] Generating symlinks..."
+echo "[2/6] Generating aliases..."
 echo
 
-if [ -f "$ALIASES_FILE" ]; then
+process_alias_file() {
 
-    echo "Cleaning broken symlinks..."
-    find "$APPS_DIR" -xtype l -delete
+    local context="$1"
+    local aliases_file="$ROOT_DIR/aliases/$context.txt"
+    local base_dir="$ROOT_DIR/${CONTEXTS[$context]}"
+
+    echo "----------------------------------------"
+    echo " Context: $context"
+    echo "----------------------------------------"
+
+    # Alias file missing
+    if [ ! -f "$aliases_file" ]; then
+        echo "[INFO] aliases/$context.txt not found"
+        echo
+        return
+    fi
+
+    # Target directory missing
+    if [ ! -d "$base_dir" ]; then
+        echo "[INFO] Directory not found:"
+        echo "$base_dir"
+        echo
+        return
+    fi
+
+    # Remove broken symlinks
+    find "$base_dir" -xtype l -delete
 
     while IFS=":" read -r original aliases || [ -n "${original:-}" ]
     do
@@ -77,15 +108,16 @@ if [ -f "$ALIASES_FILE" ]; then
         # Ignore comments
         [[ "$original" =~ ^# ]] && continue
 
-        ORIGINAL_ICON="$APPS_DIR/$original.svg"
+        ORIGINAL_ICON="$base_dir/$original.svg"
 
         # Original icon missing
         if [ ! -f "$ORIGINAL_ICON" ]; then
-            echo "[MISSING] $original.svg"
+            echo "[MISSING] $context/$original.svg"
             ((MISSING+=1))
             continue
         fi
 
+        # Split aliases
         IFS="," read -ra alias_array <<< "$aliases"
 
         for alias in "${alias_array[@]}"
@@ -101,30 +133,34 @@ if [ -f "$ALIASES_FILE" ]; then
                 continue
             fi
 
-            LINK_PATH="$APPS_DIR/$alias.svg"
+            LINK_PATH="$base_dir/$alias.svg"
 
             # Existing regular file
             if [ -e "$LINK_PATH" ] && [ ! -L "$LINK_PATH" ]; then
-                echo "[SKIPPED] $alias.svg already exists"
+                echo "[SKIPPED] $context/$alias.svg already exists"
                 ((SKIPPED+=1))
                 continue
             fi
 
+            # Create symlink
             ln -sfn "$original.svg" "$LINK_PATH"
 
-            echo "[LINKED] $alias.svg -> $original.svg"
+            echo "[LINKED] $context/$alias.svg -> $original.svg"
 
             ((CREATED+=1))
         done
 
-    done < "$ALIASES_FILE"
+    done < "$aliases_file"
 
-else
-    echo "[INFO] aliases/apps.txt not found"
-fi
+    echo
+}
 
-echo
-echo "Symlink summary:"
+for context in "${!CONTEXTS[@]}"
+do
+    process_alias_file "$context"
+done
+
+echo "Alias summary:"
 echo "  Created : $CREATED"
 echo "  Skipped : $SKIPPED"
 echo "  Missing : $MISSING"
@@ -134,7 +170,7 @@ echo "  Missing : $MISSING"
 # ========================================
 
 echo
-echo "[3/7] Installing theme..."
+echo "[3/6] Installing theme..."
 echo
 
 mkdir -p "$HOME/.local/share/icons"
@@ -151,7 +187,7 @@ echo "$TARGET_DIR"
 # ========================================
 
 echo
-echo "[4/7] Updating icon cache..."
+echo "[4/6] Updating GTK icon cache..."
 echo
 
 if command -v gtk-update-icon-cache >/dev/null 2>&1; then
@@ -165,11 +201,11 @@ else
 fi
 
 # ========================================
-# UPDATE DESKTOP DATABASE
+# UPDATE DESKTOP + MIME DATABASES
 # ========================================
 
 echo
-echo "[5/7] Updating desktop database..."
+echo "[5/6] Updating desktop databases..."
 echo
 
 if command -v update-desktop-database >/dev/null 2>&1; then
@@ -181,14 +217,6 @@ if command -v update-desktop-database >/dev/null 2>&1; then
 else
     echo "[WARNING] update-desktop-database not found"
 fi
-
-# ========================================
-# UPDATE MIME DATABASE
-# ========================================
-
-echo
-echo "[6/7] Updating MIME database..."
-echo
 
 if command -v update-mime-database >/dev/null 2>&1; then
 
@@ -205,7 +233,7 @@ fi
 # ========================================
 
 echo
-echo "[7/7] Cleaning old caches..."
+echo "[6/6] Cleaning old caches..."
 echo
 
 rm -rf "$HOME/.cache/icon-cache.kcache" 2>/dev/null || true
