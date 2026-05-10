@@ -1,0 +1,8 @@
+folder:inode-directory,directory
+folder-documents:documents
+folder-download:downloads
+folder-pictures:images,pictures
+folder-videos:movies,videos
+folder-music:audio,music
+folder-trash:user-trash,trash
+user-home:home
