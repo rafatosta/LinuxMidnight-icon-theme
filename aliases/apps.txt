@@ -8,4 +8,5 @@ onlyoffice:onlyoffice-desktopeditors,org.onlyoffice.desktopeditors
 intellij:com.jetbrains.IntelliJ-IDEA-Ultimate,com.jetbrains.IntelliJ-IDEA-Community
 github:io.github.pol_rivero.github-desktop-plus
 softwarecenter:org.gnome.Software
+file-manager:org.gnome.Nautilus
 
