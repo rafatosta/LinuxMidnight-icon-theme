@@ -2,3 +2,4 @@ code:com.visualstudio.code,visual-studio-code,vscode
 google-chrome:com.google.Chrome
 terminal:org.gnome.Ptyxis
 whatsapp:com.ktechpit.whatsie,io.github.tobagin.karere
+spotify:com.spotify.Client
