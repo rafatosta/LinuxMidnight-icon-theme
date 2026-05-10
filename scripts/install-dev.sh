@@ -6,7 +6,7 @@ set -Eeuo pipefail
 # LinuxDark Icon Theme - Dev Installer
 # ========================================
 
-THEME_NAME="LinuxDark-icon-theme"
+THEME_NAME="LinuxDark"
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 TARGET_DIR="$HOME/.local/share/icons/$THEME_NAME"
