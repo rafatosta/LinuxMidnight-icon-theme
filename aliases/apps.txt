@@ -5,3 +5,4 @@ terminal:org.gnome.Ptyxis
 whatsapp:com.ktechpit.whatsie,io.github.tobagin.karere
 spotify:com.spotify.Client
 onlyoffice:onlyoffice-desktopeditors,org.onlyoffice.desktopeditors
+intellij:com.jetbrains.IntelliJ-IDEA-Ultimate,com.jetbrains.IntelliJ-IDEA-Community
