@@ -12,3 +12,5 @@ file-manager:org.gnome.Nautilus
 dialect:app.drey.Dialect
 boxsvg:com.boxy_svg.BoxySVG
 nvidia:nvidia-settings
+gnome-loupe:org.gnome.Loupe
+gnome-clocks:org.gnome.clocks
