@@ -16,3 +16,4 @@ gnome-loupe:org.gnome.Loupe
 gnome-clocks:org.gnome.clocks
 gnome-calendar:org.gnome.Calendar
 gnome-texteditor:org.gnome.TextEditor
+gnome-calculator:org.gnome.Calculator
