@@ -15,3 +15,4 @@ nvidia:nvidia-settings
 gnome-loupe:org.gnome.Loupe
 gnome-clocks:org.gnome.clocks
 gnome-calendar:org.gnome.Calendar
+gnome-texteditor:org.gnome.TextEditor
