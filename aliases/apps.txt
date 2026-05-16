@@ -21,3 +21,4 @@ heroicgameslauncher:com.heroicgameslauncher.hgl
 steam:com.valvesoftware.Steam
 virt-manager:org.virt_manager.virt-manager
 thunderbird:org.mozilla.Thunderbird
+evolution:org.gnome.Evolution
