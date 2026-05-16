@@ -17,3 +17,5 @@ gnome-clocks:org.gnome.clocks
 gnome-calendar:org.gnome.Calendar
 gnome-texteditor:org.gnome.TextEditor
 gnome-calculator:org.gnome.Calculator
+heroicgameslauncher:com.heroicgameslauncher.hgl
+steam:com.valvesoftware.Steam
