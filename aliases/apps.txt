@@ -19,3 +19,4 @@ gnome-texteditor:org.gnome.TextEditor
 gnome-calculator:org.gnome.Calculator
 heroicgameslauncher:com.heroicgameslauncher.hgl
 steam:com.valvesoftware.Steam
+virt-manager:org.virt_manager.virt-manager
