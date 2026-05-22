@@ -24,3 +24,12 @@ steam:com.valvesoftware.Steam
 virt-manager:org.virt_manager.virt-manager
 thunderbird:org.mozilla.Thunderbird
 evolution:org.gnome.Evolution
+libreoffice-writer:org.libreoffice.LibreOffice.writer,libreoffice-writer
+libreoffice-calc:libreoffice-calc,org.libreoffice.LibreOffice.calc
+libreoffice-impress:libreoffice-impress,org.libreoffice.LibreOffice.impress
+libreoffice-base:libreoffice-base,org.libreoffice.LibreOffice.base
+libreoffice-draw:libreoffice-draw,org.libreoffice.LibreOffice.draw
+libreoffice-math:libreoffice-math,org.libreoffice.LibreOffice.math
+libreoffice-startcenter:libreoffice-startcenter,org.libreoffice.LibreOffice.startcenter
+libreoffice-basic:libreoffice-basic,org.libreoffice.LibreOffice.basic
+libreoffice-chart:libreoffice-chart,org.libreoffice.LibreOffice.chart
