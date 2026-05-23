@@ -19,6 +19,7 @@ gnome-clocks:org.gnome.clocks
 gnome-calendar:org.gnome.Calendar
 gnome-texteditor:org.gnome.TextEditor
 gnome-calculator:org.gnome.Calculator
+gnome-settings:org.gnome.Settings
 heroicgameslauncher:com.heroicgameslauncher.hgl
 steam:com.valvesoftware.Steam
 virt-manager:org.virt_manager.virt-manager
