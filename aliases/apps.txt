@@ -34,3 +34,4 @@ libreoffice-math:libreoffice-math,org.libreoffice.LibreOffice.math
 libreoffice-startcenter:libreoffice-startcenter,org.libreoffice.LibreOffice.startcenter
 libreoffice-basic:libreoffice-basic,org.libreoffice.LibreOffice.basic
 libreoffice-chart:libreoffice-chart,org.libreoffice.LibreOffice.chart
+qtdesigner:io.qt.Designer
