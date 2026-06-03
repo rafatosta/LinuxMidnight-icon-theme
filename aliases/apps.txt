@@ -35,3 +35,4 @@ libreoffice-startcenter:libreoffice-startcenter,org.libreoffice.LibreOffice.star
 libreoffice-basic:libreoffice-basic,org.libreoffice.LibreOffice.basic
 libreoffice-chart:libreoffice-chart,org.libreoffice.LibreOffice.chart
 qtdesigner:io.qt.Designer
+gnome-systemmonitor:org.gnome.SystemMonitor
