@@ -8,7 +8,7 @@ whatsapp:com.ktechpit.whatsie,io.github.tobagin.karere
 spotify:com.spotify.Client,spotify
 onlyoffice:onlyoffice-desktopeditors,org.onlyoffice.desktopeditors
 intellij:com.jetbrains.IntelliJ-IDEA-Ultimate,com.jetbrains.IntelliJ-IDEA-Community
-github:io.github.pol_rivero.github-desktop-plus
+github:io.github.pol_rivero.github-desktop-plus,org.desktop_plus.desktop-plus
 softwarecenter:org.gnome.Software
 file-manager:org.gnome.Nautilus
 dialect:app.drey.Dialect
