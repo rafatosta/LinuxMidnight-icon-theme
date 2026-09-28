@@ -38,3 +38,4 @@ qtdesigner:io.qt.Designer
 gnome-systemmonitor:org.gnome.SystemMonitor
 gnome-font-viewer:org.gnome.font-viewer
 gnome-characters:org.gnome.Characters
+Baobab:org.gnome.baobab
