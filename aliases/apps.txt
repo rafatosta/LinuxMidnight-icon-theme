@@ -1,4 +1,5 @@
 code:com.visualstudio.code,visual-studio-code,vscode
+codium:com.vscodium.codium
 google-chrome:com.google.Chrome,google-chrome-stable
 google-calendar:chrome-kjbdgfilnfhdoflbpgamdcdgpehopbep-Default
 google-tasks:chrome-okhfeehhillipaleckndoboggdkcebmo-Default
