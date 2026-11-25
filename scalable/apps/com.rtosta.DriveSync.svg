@@ -14,23 +14,52 @@
       <stop stop-color="#323131" offset="0"/>
       <stop stop-color="#141414" offset="1"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#19334D" flood-opacity="0.15"/>
+    <linearGradient id="blue-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#076cff"/>
+      <stop offset="1" stop-color="#0052ec"/>
+    </linearGradient>
+    <linearGradient id="metal-edge" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#aeb5c2"/>
+      <stop offset="0.55" stop-color="#b7beca"/>
+      <stop offset="1" stop-color="#cbd0da"/>
+    </linearGradient>
+    <linearGradient id="metal-top" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#e3e7ef"/>
+      <stop offset="0.5" stop-color="#dce0e8"/>
+      <stop offset="1" stop-color="#e1e5ed"/>
+    </linearGradient>
+    <linearGradient id="screw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#aab2bf"/>
+      <stop offset="1" stop-color="#b9c0cc"/>
+    </linearGradient>
+    <filter id="disk-shadow" x="-.2" y="-.2" width="1.4" height="1.5" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
-    <clipPath id="cloudClip">
-      <path d="M67 183c-21 0-38-16-38-37 0-19 14-35 33-37 4-29 28-51 58-51 24 0 45 14 54 35 23 1 41 20 41 43 0 26-21 47-47 47H67z"/>
+    <linearGradient id="platter-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6dae2"/>
+      <stop offset="1" stop-color="#b5bbc7"/>
+    </linearGradient>
+    <radialGradient id="platter-top" cx=".42" cy=".37" r=".75">
+      <stop offset="0" stop-color="#f0f2f6"/>
+      <stop offset="1" stop-color="#e4e8ee"/>
+    </radialGradient>
+    <linearGradient id="led" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#92d900"/>
+      <stop offset="1" stop-color="#83d500"/>
+    </linearGradient>
+    <clipPath id="drive-clip">
+      <path d="M 174,812 L 233,412 Q 244,330 329,330 H 887 Q 965,330 981,412 L 1048,810 Q 1060,906 979,907 H 248 Q 164,907 174,812 Z"/>
     </clipPath>
-    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1" gradientTransform="matrix(0.733332, 0.089772, -0.697629, 0.275486, 0.333424, 0.429244)">
-      <stop offset="0" stop-color="#33D17A"/>
-      <stop offset="1" stop-color="#1A9C59"/>
+    <filter id="cloud-shadow" x="-.15" y="-.15" width="1.35" height="1.45" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <linearGradient id="cloud-top" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#f7f8fa"/>
+      <stop offset="1" stop-color="#f3f5f8"/>
     </linearGradient>
-    <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1" gradientTransform="matrix(0.652406, -0.220594, -0.621563, 0.292155, 0.278953, 0.245192)">
-      <stop offset="0" stop-color="#F9D34A"/>
-      <stop offset="1" stop-color="#F6B900"/>
-    </linearGradient>
-    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1" gradientTransform="matrix(0.546575, 0.541809, -0.608581, -0.134717, 0.586931, 0.212314)">
-      <stop offset="0" stop-color="#42A5F5"/>
-      <stop offset="1" stop-color="#0877E8"/>
+    <linearGradient id="sync-blue" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#0068ff"/>
+      <stop offset="1" stop-color="#0058f1"/>
     </linearGradient>
   </defs>
   <g>
@@ -40,19 +69,46 @@
       <path d="m5.3603 1.0583c-1.5298 0-2.5775 0.45637-3.2597 1.1999-0.67868 0.73981-1.0423 1.8002-1.0423 3.0008v6.415c0 1.2006 0.36361 2.2609 1.0423 3.0008 0.68219 0.74355 1.7299 1.1999 3.2597 1.1999h6.2305c1.5298 0 2.5775-0.45637 3.2597-1.1999 0.67868-0.73981 1.0242-1.7027 1.0242-3.0008v-6.1742c0-1.5703-0.34552-2.5018-1.0242-3.2416-0.68219-0.74355-1.7299-1.1999-3.2597-1.1999h-4.8456zm-0.00103 0.26406h6.2326c1.4772 0 2.437 0.43133 3.0644 1.1152 0.63411 0.69126 0.95341 1.5307 0.95341 3.0623v6.1742c0 1.2512-0.32181 2.1335-0.95341 2.822-0.6274 0.68381-1.5871 1.1136-3.0644 1.1136h-6.2326c-1.4772 0-2.437-0.42978-3.0644-1.1136-0.62537-0.68172-0.97253-1.6747-0.97253-2.822v-6.4145c0-1.1472 0.34717-2.1403 0.97253-2.822 0.6274-0.68381 1.5871-1.1152 3.0644-1.1152z" fill="url(#linearGradient8)" stroke-width="1.0001"/>
     </g>
   </g>
-  <g style="" transform="matrix(0.375, 0, 0, 0.375, 13.873415, 22.977906)">
-    <g transform="matrix(0.621359, 0, 0, 0.621359, -28.529633, -52.678033)" style="">
-      <rect x="25" y="52" width="206" height="137" fill="#0877E8" filter="url(#shadow)" clip-path="url(#cloudClip)"/>
-      <path d="M27 190V116c3-7 14-9 23-7 7-29 30-51 59-51 15 0 29 6 40 16l-61 91-18 24z" fill="url(#green)" filter="url(#shadow)" clip-path="url(#cloudClip)"/>
-      <path d="M91 55h95c24 0 43 20 43 44 0 16-8 29-20 37l-35 36-58-87z" fill="url(#yellow)" filter="url(#shadow)" clip-path="url(#cloudClip)"/>
-      <path d="M112 126l42-60c18 7 29 22 32 39 23 1 41 20 41 43 0 26-21 47-47 47H66l29-39z" fill="url(#blue)" filter="url(#shadow)" clip-path="url(#cloudClip)"/>
-      <path d="M 67 183 C 46 183 29 167 29 146 C 29 127 43 111 62 109 C 66 80 90 58 120 58 C 144 58 165 72 174 93 C 197 94 215 113 215 136 C 215 162 194 183 168 183 L 67 183 Z" fill="none" stroke="#14324A" stroke-opacity="0.10" stroke-width="1.5"/>
-      <circle cx="122" cy="137" r="34" fill="#FFFFFF"/>
-      <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" transform="matrix(1, 0, 0, 1, -6, 0)">
-        <path d="M108 130a22 22 0 0 1 36-10" stroke="#1687E8"/>
-        <path d="M139 111l8 9-12 2" stroke="#1687E8"/>
-        <path d="M148 144a22 22 0 0 1-36 10" stroke="#20A765"/>
-        <path d="M117 163l-8-9 12-2" stroke="#20A765"/>
+  <g style="" transform="matrix(0.040816, 0, 0, 0.040816, 28.512252, 31.60628)">
+    <g id="drive" transform="matrix(1, 0, 0, 1, -526.5486, -609.34566)">
+      <path id="base" fill="url(#blue-base)" d="M 171,824 H 1053 V 984 C 1053,1041 1011,1083 952,1083 H 272 C 212,1083 171,1040 171,983 Z"/>
+      <path id="metal-rim" fill="url(#metal-edge)" d="M 174,812 L 233,412 Q 244,330 329,330 H 887 Q 965,330 981,412 L 1048,810 Q 1060,906 979,907 H 248 Q 164,907 174,812 Z"/>
+      <path id="metal-face" fill="url(#metal-top)" stroke="#eff1f5" stroke-width="12" d="M 195,805 L 248,414 Q 259,348 329,348 H 885 Q 949,348 963,416 L 1027,805 Q 1039,873 975,873 H 251 Q 186,873 195,805 Z"/>
+      <g id="screws">
+        <g transform="matrix(0.9900000095367432, 0, 0, 0.9200000166893005, 339, 410)">
+          <ellipse rx="32" ry="29" fill="#8e98a8"/>
+          <ellipse rx="21" ry="19" fill="url(#screw)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 286, 797)">
+          <ellipse rx="32" ry="29" fill="#8e98a8"/>
+          <ellipse rx="21" ry="19" fill="url(#screw)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 939, 797)">
+          <ellipse rx="32" ry="29" fill="#8e98a8"/>
+          <ellipse rx="21" ry="19" fill="url(#screw)"/>
+        </g>
+      </g>
+      <g id="platter">
+        <ellipse cx="593" cy="645" rx="246" ry="177" fill="#7e8796" opacity=".26" filter="url(#disk-shadow)"/>
+        <ellipse cx="593" cy="645" rx="244" ry="175" fill="url(#platter-edge)" stroke="#a4abb7" stroke-width="3"/>
+        <ellipse cx="593" cy="624" rx="239" ry="168" fill="url(#platter-top)" stroke="#f3f5f8" stroke-width="10"/>
+        <g id="ds-monogram" fill="#b9c0cd" opacity=".29">
+          <path d="M 484,581 C 512,574 552,572 579,584 C 610,597 616,617 595,635 C 571,654 531,660 474,659 L 512,585 Z M 536,587 L 507,644 C 542,645 565,636 577,622 C 592,604 573,587 536,587 Z" fill-rule="evenodd"/>
+          <path d="M 710,614 L 695,626 C 679,614 655,611 644,620 C 631,631 650,636 667,643 C 697,654 706,666 695,683 C 682,703 653,708 620,700 C 584,692 542,667 485,696 C 517,669 555,663 589,674 C 622,684 651,694 668,680 C 682,668 660,659 641,652 C 615,642 608,629 622,615 C 641,597 682,598 710,614 Z"/>
+        </g>
+      </g>
+      <rect id="status-slot" x="284" y="957" width="179" height="68" rx="34" fill="#f6f7fa"/>
+      <circle id="power-led" cx="912" cy="991" r="37.5" fill="url(#led)"/>
+    </g>
+    <g id="cloud" transform="matrix(1, 0, 0, 1, -526.5486, -609.34566)">
+      <g clip-path="url(#drive-clip)">
+        <path d="M 634,558 C 548,558 478,492 477,409 C 476,330 541,265 625,264 C 650,198 711,155 780,155 C 852,155 914,199 932,264 C 999,268 1048,330 1048,405 C 1048,488 986,558 905,558 Z" transform="matrix(1, 0, 0, 1, 0, 12)" fill="#697181" opacity=".28" filter="url(#cloud-shadow)"/>
+      </g>
+      <path d="M 634,558 C 548,558 478,492 477,409 C 476,330 541,265 625,264 C 650,198 711,155 780,155 C 852,155 914,199 932,264 C 999,268 1048,330 1048,405 C 1048,488 986,558 905,558 Z" transform="matrix(1, 0, 0, 1, 0, 5)" fill="#a2aab8" stroke="#929aa8" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M 634,558 C 548,558 478,492 477,409 C 476,330 541,265 625,264 C 650,198 711,155 780,155 C 852,155 914,199 932,264 C 999,268 1048,330 1048,405 C 1048,488 986,558 905,558 Z" fill="url(#cloud-top)" stroke="#aeb5c2" stroke-width="15" stroke-linejoin="round"/>
+      <g id="sync-arrows" fill="url(#sync-blue)">
+        <path id="sync-top" d="M 676,343 C 696,300 737,272 783,272 C 816,272 846,286 868,311 L 889,293 Q 896,286 904,292 Q 910,296 910,305 L 910,376 Q 910,392 894,389 L 829,370 Q 813,365 820,352 L 840,335 C 826,319 806,310 783,310 C 750,310 722,328 710,356 C 705,367 694,372 684,367 C 674,362 671,352 676,343 Z"/>
+        <path id="sync-bottom" d="M 894,431 C 878,477 836,508 786,508 C 750,508 718,492 696,463 L 677,480 Q 669,487 661,481 Q 656,477 656,468 L 656,400 Q 656,383 672,386 L 738,404 Q 753,409 747,421 L 726,439 C 741,458 762,469 786,469 C 819,469 847,450 859,419 C 863,408 873,402 884,407 C 894,412 899,421 894,431 Z"/>
       </g>
     </g>
   </g>
